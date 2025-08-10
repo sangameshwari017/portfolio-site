@@ -1,0 +1,388 @@
+/* 🌑 Base Theme */
+body {
+  margin: 0;
+  font-family: 'Courier New', monospace;
+  background-color: #0f0f0f;
+  color: #c77dff;
+  transition: all 0.3s ease;
+}
+
+/* 🌟 Header */
+header {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #1a1a1a;
+  border-bottom: 2px solid #c77dff;
+}
+
+.profile-pic {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #c77dff;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #c77dff;
+  text-shadow: 0 0 10px #c77dff;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #a685e2;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: transparent;
+  border: 2px solid #c77dff;
+  color: #c77dff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #c77dff;
+  color: #0f0f0f;
+}
+
+/* ✨ Section Styling */
+section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+section h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #a685e2;
+  text-shadow: 0 0 5px #a685e2;
+}
+
+/* 👩‍💻 About */
+.about p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  color: #dcdcdc;
+}
+
+/* 🛠 Skills */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.skill-category {
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #c77dff;
+}
+
+.skill-category h3 {
+  color: #c77dff;
+  margin-bottom: 10px;
+}
+
+.skill-category ul {
+  list-style-type: square;
+  padding-left: 20px;
+  color: #dcdcdc;
+}
+
+/* 🚀 Projects */
+.project-card {
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 10px #a685e2;
+}
+
+.project-card h3 {
+  color: #a685e2;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  color: #dcdcdc;
+}
+
+/* 📜 Certifications & Achievements */
+.cert-list, .achieve-list {
+  list-style-type: disc;
+  padding-left: 30px;
+  font-size: 1.1rem;
+  color: #dcdcdc;
+}
+
+.cert-list a, .achieve-list a {
+  color: #c77dff;
+  text-decoration: none;
+}
+
+.cert-list a:hover, .achieve-list a:hover {
+  text-decoration: underline;
+}
+
+/* 📬 Contact */
+.contact p, .contact a {
+  font-size: 1.1rem;
+  color: #dcdcdc;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+input, textarea {
+  padding: 10px;
+  border: 2px solid #c77dff;
+  background-color: #0f0f0f;
+  color: #c77dff;
+  border-radius: 8px;
+  font-family: 'Courier New', monospace;
+}
+
+button[type="submit"] {
+  background-color: #c77dff;
+  color: #0f0f0f;
+  border: none;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #a685e2;
+}
+
+/* ❤️ Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #1a1a1a;
+  color: #c77dff;
+  font-size: 1rem;
+  border-top: 2px solid #c77dff;
+}
+
+/* ✨ Sparkle Hover */
+.btn:hover,
+.project-card:hover,
+.skill-category:hover {
+  box-shadow: 0 0 20px #c77dff, 0 0 40px #a685e2;
+  transform: scale(1.02);
+  transition: 0.3s ease;
+}
+
+/* ✨ Fade-in Sections */
+[data-aos] {
+  opacity: 0;
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+  transform: none;
+}
+
+/* 🌌 Starfield Canvas Styling */
+#starfield {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: radial-gradient(ellipse at bottom, #0f0f0f 0%, #000000 100%);
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* 📦 Boxed Section Styling */
+.about,
+#certifications {
+  background-color: #1a1a1a;
+  border: 2px solid #c77dff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 0 15px #c77dff;
+  margin-bottom: 40px;
+}
+
+/* Optional: Add hover glow effect */
+.about:hover,
+#certifications:hover {
+  box-shadow: 0 0 25px #a685e2;
+  transition: box-shadow 0.3s ease;
+}
+/* 🏆 Achievements Section Box */
+#achievements {
+  background-color: #1a1a1a;
+  border: 2px solid #c77dff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 0 15px #c77dff;
+  margin-bottom: 40px;
+}
+
+#achievements:hover {
+  box-shadow: 0 0 25px #a685e2;
+  transition: box-shadow 0.3s ease;
+}
+
+/* 📬 Contact Section Box */
+.contact {
+  background-color: #1a1a1a;
+  border: 2px solid #c77dff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 0 15px #c77dff;
+  margin-bottom: 40px;
+}
+
+.contact:hover {
+  box-shadow: 0 0 25px #a685e2;
+  transition: box-shadow 0.3s ease;
+}
+/* 🛠 Skills Section Box */
+.skills {
+  background-color: #1a1a1a;
+  border: 2px solid #c77dff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 0 15px #c77dff;
+  margin-bottom: 40px;
+}
+
+.skills:hover {
+  box-shadow: 0 0 25px #a685e2;
+  transition: box-shadow 0.3s ease;
+}
+/* 🚀 Projects Section Box */
+
+
+.projects {
+  background-color: #1a1a1a;
+  border: 2px solid #c77dff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 0 15px #c77dff;
+  margin-bottom: 40px;
+}
+
+.projects:hover {
+  box-shadow: 0 0 25px #a685e2;
+  transition: box-shadow 0.3s ease;
+}
+/* 🎓 Education Section Box */
+.education {
+  background-color: #1a1a1a;
+  border: 2px solid #c77dff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 0 15px #c77dff;
+  margin-bottom: 40px;
+}
+
+/* 🪐 Section Title */
+
+.section-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px 0 30px;
+  position: relative;
+}
+
+.section-title span {
+  font-size: 2rem;
+  color: #a685e2;
+  padding: 0 20px;
+  background-color: #0f0f0f;
+  z-index: 1;
+  text-shadow: 0 0 5px #a685e2;
+}
+
+.section-title::before,
+.section-title::after {
+  content: "";
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #c77dff, transparent);
+  position: relative;
+  top: 0;
+  z-index: 0;
+}
+
+/* 📘 Education Cards */
+.edu-card {
+  background-color: #0f0f0f;
+  border: 1px solid #a685e2;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 10px #a685e2;
+  transition: 0.3s ease;
+}
+
+.edu-card:hover {
+  box-shadow: 0 0 20px #c77dff;
+}
+
+.edu-card h3 {
+  color: #c77dff;
+  margin-bottom: 10px;
+}
+
+.edu-card p {
+  color: #dcdcdc;
+  font-size: 1.1rem;
+  margin: 5px 0;
+}
+.project-card:hover {
+  transform: scale(1.03);
+}
+
+.project-card h3 {
+  margin-top: 0;
+  font-size: 22px;
+}
+
+.project-card p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.visit-btn {
+  display: inline-block;
+  padding: 10px 16px;
+  background-color: #bb2bf4;
+  color: #000;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.visit-btn:hover {
+  background-color: #069ec9;
+}
